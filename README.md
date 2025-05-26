@@ -67,22 +67,22 @@ Luego de ejecutar el comando anterior, el juego iniciará y podrás interactuar 
 
 ## Discusión: Conceptos de POO utilizados y justificación del diseño
 
-En este proyecto se aplicaron diversos conceptos fundamentales de la programación orientada a objetos (POO) con el objetivo de construir un sistema modular, extensible y fácil de mantener. A continuación, se describen los principales conceptos aplicados y las decisiones de diseño tomadas:
+En este proyecto se aplico conceptos de POO con el objetivo de hacer un sistema modular, que se pueda extender y sobre todo fácil de mantener
 
 ### 1. **Abstracción y encapsulamiento**
-Se crearon clases que representan entidades del juego real, como `Player`, `Dice`, `Casilla`, `Tablero` y `Game`. Cada clase contiene únicamente los atributos y métodos necesarios para su comportamiento, evitando el acceso directo a variables internas (encapsulamiento) y exponiendo funciones públicas bien definidas (interfaz).
+Se crearon clases que representan entidades del juego como `Player`, `Dice`, `Casilla`, `Tablero` y `Game`, cada clase contiene los atributos y métodos necesarios para su comportamiento, evitando y limitando el acceso directo a atributos privados haciendo uso del encapsulamiento y permitiendo o exponiendo atributos publicos que se denomina como una interfaz
 
 ### 2. **Herencia y polimorfismo**
-Se utilizó herencia para modelar los distintos tipos de casillas del tablero. A partir de una clase base abstracta `Casilla`, se derivaron las clases `CasillaNormal`, `CasillaEscalera` y `CasillaSerpiente`. Esto permitió usar **polimorfismo**, invocando métodos como `getSiguienteCasilla()` sin preocuparse por el tipo específico de casilla, lo cual facilita el mantenimiento y extensión del código.
+Se utilizó herencia para crear distintos tipos de casillas, los cuales a partir de una clase abstracta `Casilla`, heredamos hacia `CasillaNormal`, `CasillaEscalera` y `CasillaSerpiente`, permitiendonos usar **polimorfismo**, invocando métodos como `getSiguienteCasilla()` sin necesidad de conocer el tipo específico de casilla que es, lo cual nos facilita el mantenimiento y extensión del programa a la hora de implementar nuevas funciones.
 
 ### 3. **Modularidad y responsabilidad única**
-Cada clase fue diseñada con una responsabilidad clara y bien delimitada:
+Cada clase se creo con una responsabilidad unica y delimitada:
 - `Dice` simula el comportamiento de un dado.
 - `Player` almacena el estado de cada jugador.
-- `Casilla` y sus derivadas definen las reglas del tablero.
-- `Tablero` administra las casillas y provee acceso a ellas.
-- `Game` orquesta toda la lógica del flujo del juego.
-  Esta separación permite modificar o extender cada parte sin afectar otras.
+- `Casilla` y sus clases hijas definen las reglas del tablero.
+- `Tablero` administra las casillas y nos da acceso a ellas.
+- `Game` maneja toda la lógica del flujo del juego.
+  Esta forma de estructurar nos permite modificar o extender cada parte sin afectar otras
 
 ### 4. **Justificación del diseño**
-El uso de clases derivadas para los tipos de casillas evita condicionales innecesarios en la lógica del juego. Así, cada tipo de casilla sabe cómo comportarse, y `Game` puede centrarse únicamente en el flujo del turno. Además, al representar jugadores y casillas como objetos, se facilita la reutilización de código, la expansión futura (más jugadores, más reglas) y la implementación de pruebas unitarias si se requiere.
+El uso de clases hijas para los tipos de casillas evita condicionales innecesarios en la lógica del juego, por lo que cada tipo de casilla sabe que debe hacer, y `Game` puede centrarse únicamente en el flujo del turno, además, al representar jugadores y casillas como objetos, se facilita la reutilización de código, y al querer agregar mas jugadores
