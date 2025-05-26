@@ -1,7 +1,5 @@
 # Juego de Serpientes y Escaleras
 
-Link Repositorio: [https://github.com/Alanzphy/SyEProject]()
-
 ## Requisitos
 
 * Un compilador de C++ que soporte C++20 (por ejemplo, GCC, Clang, MSVC).
@@ -12,10 +10,10 @@ Link Repositorio: [https://github.com/Alanzphy/SyEProject]()
 
 1. **Clonar el repositorio:**
     ```bash
-    git clone <TU_URL_DEL_REPOSITORIO_AQUI>
+    git clone https://github.com/Alanzphy/SyEProject
     cd SyEProject 
     ```
-   (Reemplaza `<TU_URL_DEL_REPOSITORIO_AQUI>` con la URL real de tu repositorio de GitHub después de crearlo)
+
 
 2. **Configurar el proyecto con CMake:**
    Crea un directorio de compilación (por ejemplo, `build`) y ejecuta CMake desde allí:
