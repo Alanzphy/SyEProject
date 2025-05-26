@@ -34,16 +34,17 @@ void Game::start() {
             cout << "Se ha alcanzado el número máximo de turnos, el juego ha terminado." << endl;
             break;
         }
-        cin >> input;
-        input = toupper(input); // Convertir a mayúscula para evitar problemas de entrada
-        if (input != 'C' && input != 'E') {
-            cout << "Entrada no valida, por favor ingresa C para continuar o E para salir" << endl;
-            continue;
-        }
-        if (input == 'E') {
-            cout << "Juego terminado" << endl;
-            break;
-        }
+        // ESTO ES LA LOGICA SI QUIERES QUE EL JUEGO SE DETENGA CON UNA ENTRADA DEL USUARIO
+        // cin >> input;
+        // input = toupper(input); // Convertir a mayúscula para evitar problemas de entrada
+        // if (input != 'C' && input != 'E') {
+        //     cout << "Entrada no valida, por favor ingresa C para continuar o E para salir" << endl;
+        //     continue;
+        // }
+        // if (input == 'E') {
+        //     cout << "Juego terminado" << endl;
+        //     break;
+        // }
 
         Player& jugador = jugadores[jugadorActual];
         int posicionActual = jugador.getPosicion();
