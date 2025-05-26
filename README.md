@@ -1,6 +1,6 @@
 # Juego de Serpientes y Escaleras
 
-Este es un juego simple de Serpientes y Escaleras implementado en C++.
+Link Repositorio: [https://github.com/Alanzphy/SyEProject]()
 
 ## Requisitos
 
