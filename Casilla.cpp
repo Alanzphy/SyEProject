@@ -13,6 +13,8 @@ Casilla::Casilla(int num) {
     myNumber = num;
 }
 
+Casilla::~Casilla() {}
+
 int Casilla::getSiguienteCasilla() {
     return myNumber;
 }
